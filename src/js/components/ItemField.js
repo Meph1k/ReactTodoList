@@ -1,8 +1,8 @@
 import React from "react"
 import { connect } from "react-redux"
+import Item from "./Item";
 
-import { fetchUser } from "../actions/userActions"
-import { fetchTweets } from "../actions/tweetsActions"
+require("../../styles/equipment.scss");
 
 @connect((store) => {
     return {
@@ -11,27 +11,10 @@ import { fetchTweets } from "../actions/tweetsActions"
         tweets: store.tweets.tweets,
     };
 })
-export default class Layout extends React.Component {
-    componentWillMount() {
-        this.props.dispatch(fetchUser())
-    }
+export default class ItemField extends React.Component {
 
-    fetchTweets() {
-        this.props.dispatch(fetchTweets())
-    }
 
     render() {
-        const { user, tweets } = this.props;
-
-        if (!tweets.length) {
-            return <button onClick={this.fetchTweets.bind(this)}>load tweets</button>
-        }
-
-        const mappedTweets = tweets.map(tweet => <li>{tweet.text}</li>)
-
-        return <div>
-            <h1>{user.name}</h1>
-            <ul>{mappedTweets}</ul>
-        </div>
+        return <div><Item class={this.props.className}/></div>
     }
 }

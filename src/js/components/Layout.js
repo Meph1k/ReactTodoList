@@ -14,6 +14,7 @@ import { fetchTweets } from "../actions/tweetsActions"
 export default class Layout extends React.Component {
   componentWillMount() {
     this.props.dispatch(fetchUser())
+    this.fetchTweets();
   }
 
   fetchTweets() {
@@ -23,15 +24,10 @@ export default class Layout extends React.Component {
   render() {
     const { user, tweets } = this.props;
 
-    if (!tweets.length) {
-      return <button onClick={this.fetchTweets.bind(this)}>load tweets</button>
-    }
-
     const mappedTweets = tweets.map(tweet => <li>{tweet.text}</li>)
 
     return <div>
-      <h1>{user.name}</h1>
-      <ul>{mappedTweets}</ul>
+      {this.props.children}
     </div>
   }
 }

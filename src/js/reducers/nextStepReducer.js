@@ -21,7 +21,10 @@ export default function reducer(state={
         case "SAVE_CLASS": {
             return {...state, fetching: true, class: action.payload}
         }
+        case "SAVE_ALIGNMENT": {
+            return {...state, fetching: true, alignment: action.payload}
+        }
     }
 
-    return state
+    return state;
 }

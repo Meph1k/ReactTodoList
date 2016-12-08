@@ -22,3 +22,9 @@ export function saveClass(classOfACharacter) {
         payload: classOfACharacter
     }
 }
+export function saveAlignment(alignment) {
+    return {
+        type: 'SAVE_ALIGNMENT',
+        payload: alignment
+    }
+}

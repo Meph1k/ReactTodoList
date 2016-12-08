@@ -18,6 +18,9 @@ export default function reducer(state={
         case "SAVE_RACE": {
             return {...state, fetching: true, race: action.payload}
         }
+        case "SAVE_CLASS": {
+            return {...state, fetching: true, class: action.payload}
+        }
     }
 
     return state

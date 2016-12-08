@@ -16,3 +16,9 @@ export function saveRace(race) {
         payload: race
     }
 }
+export function saveClass(classOfACharacter) {
+    return {
+        type: 'SAVE_CLASS',
+        payload: classOfACharacter
+    }
+}

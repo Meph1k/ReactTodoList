@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AllAttributesWindow from './AllAttributesWindow';
 import GenderChoice from './GenderChoice';
 import RaceChoiceWindow from './RaceChoiceWindow';
+import ClassChoiceWindow from './ClassChoiceWindow';
 import { connect } from "react-redux"
 
 @connect((store) => {
@@ -20,6 +21,8 @@ export default class CharacterSpecificationWindow extends Component {
             return (<GenderChoice />);
         } else if (1 === tempStep) {
             return (<RaceChoiceWindow />);
+        } else if (2 === tempStep) {
+            return (<ClassChoiceWindow />);
         }
     }
 

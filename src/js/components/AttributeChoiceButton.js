@@ -6,16 +6,10 @@ require("../../styles/attributes.scss");
 
 @connect((store) => {
     return {
-        user: store.user.user,
-        userFetched: store.user.fetched,
-        tweets: store.tweets.tweets,
         lastStep: store.nextStep.lastStep
     };
 })
 export default class AttributeChoiceButton extends Component {
-    componentWillMount() {
-        console.log(this.props.lastStep);
-    }
 
     saveLastStep() {
         return this.props.dispatch(saveLastStep(this.props.step + 1));

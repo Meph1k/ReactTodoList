@@ -28,3 +28,15 @@ export function saveAlignment(alignment) {
         payload: alignment
     }
 }
+export function saveAbilitiesPoints(abilitiesPoints) {
+    return {
+        type: 'SAVE_ABILITIES_POINTS',
+        payload: abilitiesPoints
+    }
+}
+export function saveAbilities(abilities) {
+    return {
+        type: 'SAVE_ABILITIES',
+        payload: abilities
+    }
+}

@@ -6,9 +6,6 @@ require("../../styles/attributes.scss");
 
 @connect((store) => {
     return {
-        user: store.user.user,
-        userFetched: store.user.fetched,
-        tweets: store.tweets.tweets,
         lastStep: store.nextStep
     };
 })

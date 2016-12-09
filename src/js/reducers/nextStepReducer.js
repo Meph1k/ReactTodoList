@@ -5,7 +5,16 @@ export default function reducer(state={
     error: null,
     lastStep: 0,
     gender: null,
-    race: null
+    race: null,
+    abilitiesPoints: 0,
+    abilities: {
+        strength: 10,
+        dexterity: 10,
+        constitution: 10,
+        intelligence: 10,
+        wisdom: 10,
+        charisma: 10
+    }
 }, action) {
 
     switch (action.type) {
@@ -23,6 +32,12 @@ export default function reducer(state={
         }
         case "SAVE_ALIGNMENT": {
             return {...state, fetching: true, alignment: action.payload}
+        }
+        case "SAVE_ABILITIES_POINTS": {
+            return {...state, fetching: true, abilitiesPoints: action.payload}
+        }
+        case "SAVE_ABILITIES": {
+            return {...state, fetching: true, abilities: action.payload}
         }
     }
 

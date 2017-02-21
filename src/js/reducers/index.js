@@ -1,11 +1,9 @@
 import { combineReducers } from "redux"
-
-import tweets from "./tweetsReducer"
-import user from "./userReducer"
-import nextStep from "./nextStepReducer"
+import todo from "./todoReducer"
 
 export default combineReducers({
   tweets,
   user,
-  nextStep
+  nextStep,
+  todo
 })

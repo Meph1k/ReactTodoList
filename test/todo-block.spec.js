@@ -12,11 +12,11 @@ describe('<TodoBlock/>', () => {
     };
     
     it('should have a button to add a new todo item', () => {
-        const wrapper = mount(<TodoBlock store={store} element={element}/>);
+        const wrapper = mount(<TodoBlock store={store} element={element} />);
         expect(wrapper.find('button')).to.have.length(1);
     });
     it('should remove an item after clicking the button', () => {
-        const wrapper = mount(<TodoBlock store={store} element={element}/>);
+        const wrapper = mount(<TodoBlock store={store} element={element} />);
         wrapper.find('button').simulate('click');
         expect(store.getState().todo.todoItems).to.have.length(3);
     });

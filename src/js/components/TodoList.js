@@ -9,7 +9,10 @@ import TodoBlock from "./TodoBlock"
 })
 export default class TodoList extends React.Component {
     displayTodoList() {
-        return this.props.todoItems.map((element, index) => <div className="row" key={index}><TodoBlock element={element}/></div>)
+        return this.props.todoItems.map((element, index) =>
+            <div className="row" key={index}>
+                <TodoBlock element={element} />
+            </div>)
     }
 
     render() {

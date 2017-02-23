@@ -12,11 +12,13 @@ export default class NewTodo extends Component {
         super(props);
         this.state = {
             isNewTodoFormDisplayed: false
-        }
+        };
     }
 
     toggleNewTodoForm() {
-        this.setState({ isNewTodoFormDisplayed: !this.state.isNewTodoFormDisplayed });
+        this.setState({
+            isNewTodoFormDisplayed: !this.state.isNewTodoFormDisplayed
+        });
     }
 
     addNewItem() {

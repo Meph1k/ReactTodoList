@@ -4,7 +4,7 @@ import { addNewItem } from '../actions/todoActions'
 
 @connect((store) => {
     return {
-        todoItems: store.todo.todoItems,
+        todoItems: store.todo.todoItems
     };
 })
 export default class NewTodo extends Component {

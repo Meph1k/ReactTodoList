@@ -4,7 +4,8 @@ import { addNewItem } from '../actions/todoActions'
 
 @connect((store) => {
     return {
-        todoItems: store.todo.todoItems
+        todoItems: store.todo.todoItems,
+        idCount: store.todo.idCount
     };
 })
 export default class NewTodo extends Component {
@@ -23,7 +24,7 @@ export default class NewTodo extends Component {
         this.toggleNewTodoForm();
         let description = document.getElementById('description-textarea');
         let newItem = {
-            id: this.props.todoItems.length,
+            id: this.props.idCount,
             description: description ? description.value : 'unknown item'
         };
 

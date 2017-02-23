@@ -20,11 +20,7 @@ export default function reducer(state={
             return {...state, todoItems: [...state.todoItems, action.payload]}
         }
         case "REMOVE_ITEM": {
-            console.log('items before: ', state.todoItems);
-            state.todoItems.splice(action.payload, 1);
-            console.log('items after: ', state.todoItems);
-
-            return {todoItems: [...state.todoItems]}
+            return {todoItems: state.todoItems.filter(item => item.id !== action.payload)}
         }
     }
 

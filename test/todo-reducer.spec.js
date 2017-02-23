@@ -10,7 +10,7 @@ describe('Reducer testing', function () {
     it('should add an item to the list', () => {
         const action = {
             type: "ADD_ITEM",
-            payload: {id: 1, description: 'other sample'}
+            payload: {description: 'other sample'}
         };
         const nextState = reducer(initialState, action);
         expect(nextState).to.deep.equal({todoItems: [{id: 0, description: 'sample'}, {id: 1, description: 'other sample'}], idCount: 2});

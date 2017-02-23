@@ -5,7 +5,7 @@ import {expect} from 'chai';
 import reducer from '../src/js/reducers/todoReducer';
 
 describe('Reducer testing', function () {
-    const initialState = {todoItems: [{id: 0, description: 'sample'}]};
+    const initialState = {todoItems: [{id: 0, description: 'sample'}], idCount: 1};
 
     it('should add an item to the list', function () {
         const action = {
@@ -13,7 +13,7 @@ describe('Reducer testing', function () {
             payload: {id: 1, description: 'other sample'}
         };
         const nextState = reducer(initialState, action);
-        expect(nextState).to.deep.equal({todoItems: [{id: 0, description: 'sample'}, {id: 1, description: 'other sample'}]});
+        expect(nextState).to.deep.equal({todoItems: [{id: 0, description: 'sample'}, {id: 1, description: 'other sample'}], idCount: 2});
     });
     it('should remove an item from the list', function () {
         const action = {
@@ -21,6 +21,6 @@ describe('Reducer testing', function () {
             payload: 0
         };
         const nextState = reducer(initialState, action);
-        expect(nextState).to.deep.equal({todoItems: []});
+        expect(nextState).to.deep.equal({todoItems: [], idCount: 1});
     });
 });

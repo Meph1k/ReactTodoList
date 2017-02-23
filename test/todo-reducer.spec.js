@@ -4,7 +4,7 @@ import {expect} from 'chai';
 
 import reducer from '../src/js/reducers/todoReducer';
 
-describe('Reducer testing', function () {
+describe('Reducer testing', () => {
     const initialState = {todoItems: [{id: 0, description: 'sample'}], idCount: 1};
 
     it('should add an item to the list', () => {

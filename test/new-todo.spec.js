@@ -5,7 +5,7 @@ import store from "../src/js/store";
 
 import NewTodo from '../src/js/components/NewTodo';
 
-describe('<NewTodo/>', function () {
+describe('<NewTodo/>', () => {
     it('should have a button to add a new todo item', () => {
         const wrapper = mount(<NewTodo store={store} />);
         expect(wrapper.find('button')).to.have.length(1);

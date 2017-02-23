@@ -5,7 +5,7 @@ import store from "../src/js/store";
 
 import TodoBlock from '../src/js/components/TodoBlock';
 
-describe('<TodoBlock/>', function () {
+describe('<TodoBlock/>', () => {
     const element = {
         id: 1,
         description: 'sample description'

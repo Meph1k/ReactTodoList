@@ -30,5 +30,4 @@ TodoBlock.propTypes = {
     element: React.PropTypes.shape({
         id: React.PropTypes.number && React.PropTypes.isRequired
     })
-
 };

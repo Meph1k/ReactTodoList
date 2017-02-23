@@ -1,6 +1,6 @@
 import React from 'react';
-import { mount, shallow } from 'enzyme';
-import {expect} from 'chai';
+import { mount } from 'enzyme';
+import { expect } from 'chai';
 import store from "../src/js/store";
 
 import TodoBlock from '../src/js/components/TodoBlock';

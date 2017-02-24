@@ -1,24 +1,14 @@
 import React from "react"
-import { connect } from "react-redux"
-import TodoBlock from "./TodoBlock"
 import NewTodo from "./NewTodo"
+import Title from "./Title"
+import TodoList from "./TodoList"
 
-@connect((store) => {
-  return {
-    todoItems: store.todo.todoItems
-  };
-})
 export default class Layout extends React.Component {
-  displayTodoList() {
-    return this.props.todoItems.map((element, index) => <div key={index}><TodoBlock element={element} /></div>)
-  }
-
   render() {
-    
     return (
-        <div>
-          {this.props.children}
-          {this.displayTodoList()}
+        <div className="layout-block">
+          <Title />
+          <TodoList />
           <NewTodo />
         </div>
     );

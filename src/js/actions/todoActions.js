@@ -4,9 +4,9 @@ export function addNewItem(newItem) {
         payload: newItem
     }
 }
-export function removeItem(item) {
+export function removeItem(itemId) {
     return {
         type: 'REMOVE_ITEM',
-        payload: item
+        payload: itemId
     }
 }

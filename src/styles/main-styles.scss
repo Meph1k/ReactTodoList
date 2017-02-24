@@ -1,15 +1,39 @@
-$color-grey: #a3a3a3;
-$color-layout: rgba(171, 171, 171, 0.55);
-$color-dark-brown: #601919;
-
-body {
-    width: 99%;
-}
-
 .additional-margin-top {
     margin-top: 90px;
 
     &--less {
         margin-top: 45px;
     }
+}
+
+.todo-element {
+    min-height: 60px;
+    word-break: break-all;
+}
+
+.panel {
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+}
+
+.add-btn {
+    width: 170px;
+    display: block;
+}
+
+.new-todo-block {
+    margin-top: 15px;
+}
+
+#description-textarea {
+    width: 170px;
+    resize: none;
+}
+
+.layout-block {
+    width: calc(100% - 30px);
 }

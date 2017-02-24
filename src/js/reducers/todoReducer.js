@@ -1,20 +1,6 @@
-export default function reducer(state = {
-    todoItems: [
-        {
-            id: 0,
-            description: 'clean up the house'
-        },
-        {
-            id: 1,
-            description: 'go out tonight'
-        },
-        {
-            id: 2,
-            description: 'empty the bin'
-        }
-    ],
-    idCount: 3
-}, action) {
+import todoItems from "../consts/basic-todo-list.json";
+
+export default function reducer(state = {...todoItems}, action) {
 
     switch (action.type) {
         case "ADD_ITEM": {

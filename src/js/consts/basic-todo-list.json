@@ -1,0 +1,16 @@
+{
+  "todoItems":
+  [{
+    "id": 0,
+    "description": "clean up the house"
+  },
+  {
+    "id": 1,
+    "description": "go out tonight"
+  },
+  {
+    "id": 2,
+    "description": "empty the bin"
+  }],
+    "idCount": 3
+}

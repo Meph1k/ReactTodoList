@@ -13,6 +13,7 @@ export default class NewTodo extends Component {
         this.state = {
             isNewTodoFormDisplayed: false
         };
+        this.description = null;
     }
 
     toggleNewTodoForm() {
@@ -23,9 +24,8 @@ export default class NewTodo extends Component {
 
     addNewItem() {
         this.toggleNewTodoForm();
-        let description = document.getElementById('description-textarea');
         let newItem = {
-            description: description ? description.value : 'unknown item'
+            description: this.description ? this.description.value : 'unknown item'
         };
 
         return this.props.dispatch(addNewItem(newItem));
@@ -37,7 +37,7 @@ export default class NewTodo extends Component {
                 <div className="row">
                     <div className="col-xs-offset-4 col-sm-offset-5 additional-margin-top--less">
                         <div className="row">
-                            <button className="btn btn-primary col-xs-5 col-lg-2" onClick={this.toggleNewTodoForm.bind(this)}>Add new todo</button>
+                            <button className="btn btn-primary col-xs-5 col-lg-2" onClick={() => this.toggleNewTodoForm()}>Add new todo</button>
                         </div>
                     </div>
                 </div>
@@ -52,10 +52,14 @@ export default class NewTodo extends Component {
                         </label>
                     </div>
                     <div class="row">
-                        <textarea className="col-xs-4" id="description-textarea"></textarea>
+                        <textarea
+                            className="col-xs-4"
+                            id="description-textarea"
+                            ref={(input) => { this.description = input; }}
+                        ></textarea>
                     </div>
                     <div class="row">
-                        <button className="col-xs-4 btn btn-primary add-btn" onClick={this.addNewItem.bind(this)}>Add new item</button>
+                        <button className="col-xs-4 btn btn-primary add-btn" onClick={() => this.addNewItem()}>Add new item</button>
                     </div>
                 </div>
             </div>

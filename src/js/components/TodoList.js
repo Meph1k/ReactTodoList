@@ -23,3 +23,7 @@ export default class TodoList extends React.Component {
         );
     }
 }
+
+TodoList.propTypes = {
+    todoItems: React.PropTypes.array
+};

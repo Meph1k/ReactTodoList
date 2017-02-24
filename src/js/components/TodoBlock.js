@@ -19,7 +19,7 @@ export default class TodoBlock extends Component {
                     <div className="col-xs-5 col-lg-2 panel panel-primary todo-element">{this.props.element.description}</div>
                 </div>
                 <div className="row">
-                    <button className="col-xs-5 col-lg-2 btn btn-danger small" onClick={this.removeItem.bind(this)}>x</button>
+                    <button className="col-xs-5 col-lg-2 btn btn-danger small" onClick={() => this.removeItem()}>x</button>
                 </div>
             </div>
         );
